@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FaaStore - Layanan Hosting & Panel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #007bff;
+      --bg: #f9f9f9;
+      --text: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hamburger {
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .menu-mobile {
+      display: none;
+      flex-direction: column;
+      background: white;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .menu-mobile a {
+      color: var(--text);
+      padding: 0.75rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+
+    .card h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .card a {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .card a:hover {
+      background: #005ecb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background: white;
+      color: #666;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+      nav {
+        display: none;
+      }
+      .menu-mobile.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">FaaStore</div>
+  </div>
+</header>
+
+<main>
+  <div class="section-title">All About FaaStore.Id</div>
+  <div class="grid">
+    <div class="card">
+      <h3>Panel Pterodactyl</h3>
+      <p>Panel pterodactyl untuk kebutuhan bot whatsapp/telegram atau untuk host game.</p>
+      <a href="https://ptero.jardongo.my.id">Lihat Detail</a>
+    </div>
+    <div class="card">
+      <h3>Reseller Panel</h3>
+      <p>Dapatkan akses pembuatan panel secara gratis kapan saja dan dimana saja.</p>
+      <a href="https://rslrptero.jardongo.my.id">Lihat Detail</a>
+    </div>
+    <div class="card">
+      <h3>Gabung Grup Whatsapp</h3>
+      <p>Bergabung dengan grup whatsapp kami.</p>
+      <a href="https://chat.whatsapp.com/Eh3gfYMWEQmAPYgIDqT7pE">Gabung</a>
+    </div>
+    <div class="card">
+      <h3>Contact Support</h3>
+      <p>Hubungi kami langsung via WhatsApp kapan saja.</p>
+      <a href="https://wa.me/6283856752850">Hubungi Sekarang</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 FaaStore.Id - Solusi hosting terbaik.
+</footer>
+
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
